@@ -4,7 +4,7 @@ const route = express.Router();
 const homeController = require('./src/controllers/homeController');
 const loginController = require('./src/controllers/loginController');
 
-// Rotas da home 
+// Rotas da home
 route.get('/', homeController.index);
 
 // Rotas de login
