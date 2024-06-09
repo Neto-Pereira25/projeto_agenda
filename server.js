@@ -10,7 +10,12 @@ const app = express();
 // garantir que os dados salvos são realmentes os dados na
 // forma que queremos salvar
 const mongoose = require('mongoose');
-mongoose.connect(process.env.CONNECTIONSTRING, /*{ useNewUrlParser: true, useUnifiedTopology: true }*/)
+mongoose.connect(process.env.CONNECTIONSTRING, /*
+    { 
+        useNewUrlParser: true, 
+        useUnifiedTopology: true,
+        useFindAndModify: false
+    }*/)
     .then(() => {
         // a função connect retorna uma promese, com isso, vamos emitir um
         // sinal(evento) para quando a conexão for feita
